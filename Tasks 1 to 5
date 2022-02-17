@@ -9,16 +9,17 @@ def Payment():
 #2
 def Numbers():
     sum = count = 0
-    while(True):
+    while (True):
         number = input("Enter a number:")
         if (number == "done"):
             break
-        if (number.isdigit()):
+        try:
+            float(number)
             sum += float(number)
             count += 1
-        else:
+        except:
             print("Invalid input")
-    print(f"Sum:{sum}, count:{count}, mean:{sum/count}")
+    print(f"Sum:{sum}, count:{count}, mean:{sum / count}")
 
 
 #3
